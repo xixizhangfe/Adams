@@ -1,3 +1,6 @@
+# 说明
+本项目是对Adams主题的改动。下面是Adams的介绍。
+
 # Adams
 
 一套适用于 WordPress 的简洁、轻量的 Theme
