@@ -1,10 +1,10 @@
 @charset "utf-8";
 /*
-	Theme Name: Adams
-	Theme URL: https://biji.io
+	Theme Name: Adams-Zhangxixi
+	Theme URL: http://zhaoxi-sight.com/
 	Description: Simple is beautiful
-	Author: Tokin
-	Author URI: https://biji.io
+	Author: Zhangxixi
+	Author URI: http://zhaoxi-sight.com/
 	Version: 1.5.4
 */
 /* Reset */
@@ -71,7 +71,32 @@ sup {
 ::-webkit-scrollbar {width: 10px;height: 10px;}
 ::-webkit-scrollbar-thumb {background-color: #656D78;background-clip: padding-box;border: 3px solid transparent;border-radius:5px;}
 /* Layouts */
-.container {max-width: 780px;width: 96%;margin: 0 auto;padding: 0 2%;position: relative;}
+.container {
+    max-width: 780px;
+    width: 96%;
+    margin: 0 auto;
+    padding: 0 2%;
+    position: relative;
+}
+
+.container .blog-right-sidebar.fixed {
+    position: fixed;
+    right: 36px;
+    width: 200px;
+    min-height: 200px;
+    overflow: auto;
+    border: 1px solid #f0f0f0;
+}
+
+.container .blog-right-sidebar.fixed:hover {
+    box-shadow: 0 1px 2px -2px rgb(0 0 0 / 16%), 0 3px 6px 0 rgb(0 0 0 / 12%), 0 5px 12px 4px rgb(0 0 0 / 9%);
+}
+
+@media screen and (max-width: 1200px) {
+    .container .blog-right-sidebar {
+        display: none;
+    }
+}
 
 /* Header */
 .header{margin: 0 0 6rem;padding:4rem 0 2rem 0;position:relative;color:#656D78;font-size:.96rem;line-height: 1.5;}
@@ -144,7 +169,7 @@ sup {
 .post-list .meta:before{content:'';background:#434A54;width:80px;height:2px;position:absolute;top:0;left:-40px;}
 .post-list .meta:first-child{padding:0}
 .post-list .meta:first-child:before{display:none;}
-.post-list .meta header h2{font-size: 1.4rem;line-height:1.4rem;color:#434A54;position:relative;display:inline-block;font-weight:bolder;}
+.post-list .meta header h2{font-size: 1.4rem;line-height:1.4rem;color:#434A54;position:relative;display:block;font-weight:bolder;}
 .post-list .meta header h2:hover{color:#3274ff;}
 .post-list .meta main {font-size:1rem;margin:2rem 0}
 .post-list .meta main .thumb{float:right;border-radius: 2px;position:relative;margin: 0 0 0 2%;width:180px;height: 132px;border: 1px solid rgba(0,0,0,.05);background-color: #f0f0f0;background-position: center;background-size: cover;background-origin: border-box;}

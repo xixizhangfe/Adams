@@ -51,10 +51,10 @@
                 $("a[rel='external']:not([href^='#']),a[rel='external nofollow']:not([href^='#'])").attr("target", "_blank");
                 $("a.vi,.gallery a,.attachment a").attr("rel", "");
                 <?php if(!get_theme_mod('biji_setting_viewimage')){ ?>
-                $.viewImage({
-                    'target': '.gallery a,.gallery img,.attachment a,.post_article img,.post_article a,a.vi',
-                    'exclude': '.readerswall img,.gallery a img,.attachment a img'
-                });
+                // $.viewImage({
+                //     'target': '.gallery a,.gallery img,.attachment a,.post_article img,.post_article a,a.vi',
+                //     'exclude': '.readerswall img,.gallery a img,.attachment a img'
+                // });
                 <?php } if(!get_theme_mod('biji_setting_lately')){ ?>
                 Lately({
                     'target': '.commentmetadata a:first-child,.infos time,.post-list time'

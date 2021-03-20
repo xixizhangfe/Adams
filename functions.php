@@ -584,6 +584,41 @@ if (!class_exists('ThemeUpdate')):
         }
     }
 endif;
+
+// 支持阅读数查看
+function getPostViews($postID){
+    $count_key = 'views';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count=='' || !$count){
+        return "0";
+    }
+    return $count;
+}
+function setPostViews($postID){
+    $count_key = 'views';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count=='' || !$count) {
+        $count = 1;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, $count);
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
+if (function_exists('register_sidebar')) {
+    register_sidebar(array(
+        'name' =>'博客右侧边栏',
+        'id' => 'blog-right-sidebar',
+        'description' => '请拖入小工具',
+        'before_widget' => '',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+}
+
 $mytheme_update_checker = new ThemeUpdateChecker(
     'adams',
     'https://biji.io/update/adams.json'

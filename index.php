@@ -26,8 +26,7 @@
                         <footer>
                             <span class="time"><time datetime="<?php echo get_the_time('c'); ?>" title="<?php echo get_the_time('c'); ?>"
                                                      itemprop="datePublished" pubdate><?php the_time('Y-m-d'); ?></time>发布</span>
-                            <span class="hr"></span>
-                            <span class="comments"><?php comments_number('0', '1', '%'); ?> 条评论</span>
+                            <span class="hr"></span><span class="read-counts"><?php echo getPostViews(get_the_ID());?> 阅读</span><span class="hr"></span><span class="comments"><?php comments_number('0', '1', '%'); ?> 条评论</span>
                             <?php echo get_post_meta($post->ID, 'dotGood', true) ? '<span class="hr"></span><span class="likes">' . get_post_meta($post->ID, 'dotGood', true) . ' 人喜欢</span>' : ''; ?>
                         </footer>
                     </article>
